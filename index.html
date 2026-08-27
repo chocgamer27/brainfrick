@@ -1,19 +1,38 @@
-<!--Main Code-->
 
 <body style="opacity: 1; background-color: rgb(0,25,55);">
 
   
-  <header style="background-color: rgb(0,15,45)
-  ;font-size: xx-large;
+  <header style="background-color: rgb(0, 13, 29);
+  position: absolute;
+  border-radius: 20px;
+  font-size: 275%;
+  font-family: cursive;
   color: rgb(0, 93, 93);
   text-align: center;
+  top: 0%;
+  width: 98%;
   height: 7%;">BrainFrick interpreter</header>
 
+  <header style="background-color: rgba(0, 16, 35, 0.753);
+  position: absolute;
+  border-radius: 25px;
+  font-size: 130%;
+  font-family: cursive;
+  color: rgb(0, 93, 93);
+  text-align: center;
+  top:8%;
+  width: 98%;
+  height: 20%;">Most of you know the creator as chocgamer27, I made this brain(frick) interpreter, Currently "+-.,[]<>" all work there will be and are probably bugs present sorry about that, but enjoy!!</header>
+  <a href="https://github.com/chocgamer27/brainfrick" style="position: absolute; top: 13%; left: 1%; color: aquamarine; font-family: cursive; font-size: 275%;">Visit the Github Project!</a>
+  <a href="https://chocgamer27.github.io/brainfrick/" style="position: absolute; top: 20%; left: 1%; color: aquamarine; font-family: cursive; font-size: 275%;">Visit the Github DEMO!</a>
 
   <textarea class="inputs";
   id="BFinput"; 
-  style="position:absolute; 
-  top: 10%;
+  style="
+  position:absolute;
+  font-family: cursive;
+  border-radius: 20px;
+  top: 30%;
   width:45%; 
   height: 60%; 
   resize: none;
@@ -22,34 +41,34 @@
   font-size: x-large; 
   word-break: break-all;
   border: 0in;
-  "placeholder="Enter brainfrick in here!! -- please note some bugs may be present in my coding :/"></textarea>
+  "placeholder="Enter brainfrick in here!!"></textarea>
 
-  <div class="cells"; id="1"; style="background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 38.5%; top: 10%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="2"; style="background-color:rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 27.5%; top: 10%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="3"; style="background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 16.5%; top: 10%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="4"; style="background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 5.5%; top: 10%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="5"; style="background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 38.5%; top: 21.5%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="6"; style="background-color:rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 27.5%; top: 21.5%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="7"; style="background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 16.5%; top: 21.5%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="8"; style="background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 5.5%; top: 21.5%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="9"; style="background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 38.5%; top: 33%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="10"; style="background-color:rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 27.5%; top: 33%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="11"; style="background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 16.5%; top: 33%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="12"; style="background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 5.5%; top: 33%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="13"; style="background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 38.5%; top: 44.5%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="14"; style="background-color:rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 27.5%; top: 44.5%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="15"; style="background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 16.5%; top: 44.5%; text-align:center ;font-size: xx-large;">0</div>
-  <div class="cells"; id="16"; style="background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 5.5%; top: 44.5%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="1"; style="font-family: cursive; border-radius: 20px; background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 38.5%; top: 30%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="2"; style="font-family: cursive; border-radius: 20px; background-color:rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 27.5%; top: 30%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="3"; style="font-family: cursive; border-radius: 20px; background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 16.5%; top: 30%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="4"; style="font-family: cursive; border-radius: 20px; background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 5.5%; top: 30%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="5"; style="font-family: cursive; border-radius: 20px; background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 38.5%; top: 41.5%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="6"; style="font-family: cursive; border-radius: 20px; background-color:rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 27.5%; top: 41.5%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="7"; style="font-family: cursive; border-radius: 20px; background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 16.5%; top: 41.5%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="8"; style="font-family: cursive; border-radius: 20px; background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 5.5%; top: 41.5%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="9"; style="font-family: cursive; border-radius: 20px; background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 38.5%; top: 53%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="10"; style="font-family: cursive; border-radius: 20px; background-color:rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 27.5%; top: 53%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="11"; style="font-family: cursive; border-radius: 20px; background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 16.5%; top: 53%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="12"; style="font-family: cursive; border-radius: 20px; background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 5.5%; top: 53%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="13"; style="font-family: cursive; border-radius: 20px; background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 38.5%; top: 64.5%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="14"; style="font-family: cursive; border-radius: 20px; background-color:rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 27.5%; top: 64.5%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="15"; style="font-family: cursive; border-radius: 20px; background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 16.5%; top: 64.5%; text-align:center ;font-size: xx-large;">0</div>
+  <div class="cells"; id="16"; style="font-family: cursive; border-radius: 20px; background-color: rgb(15,45,90); height: 10%; width: 10%; position: absolute; right: 5.5%; top: 64.5%; text-align:center ;font-size: xx-large;">0</div>
 
-  <button id="StopRun"; style="position: absolute; height: 10%; width: 10%; right: 27.5%; top: 56%; background-color: rgb(255, 131, 199); font-size: xx-large;">STOP CODE!</button>
+  <button id="StopRun"; style="font-family: cursive; border-radius: 28px; position: absolute; height: 10%; width: 10%; right: 27.5%; top: 76%; background-color: rgb(255, 131, 199); font-size: xx-large;">STOP CODE!</button>
 
-  <button style="position: absolute; height: 10%; width: 10%; right: 38.5%; top: 56%; background-color: rgb(11, 170, 146); font-size: xx-large;" onclick=" StartRun()">Run Code</button>
+  <button id="StartBtn"; style="font-family: cursive; border-radius: 28px; position: absolute; height: 10%; width: 10%; right: 38.5%; top: 76%; background-color: rgb(11, 170, 146); font-size: xx-large;" onclick=" StartRun()">Run Code</button>
  
-  <textarea class="inputs"; id="Delay"; style="position: absolute; height: 10%; width: 21%; right: 5.5%; top: 56%; resize: none; border: 0; font-size: 180%;" placeholder="Enter tick speed     (in ms) 0 is fast 1000 is slow"></textarea>
+  <textarea class="inputs"; id="Delay"; style="font-family: cursive; border-radius: 20px; position: absolute; height: 10%; width: 21%; right: 5.5%; top: 76%; resize: none; border: 0; font-size: 140%;" placeholder="Enter tick speed (in ms) 0 is fast, 1000 is slow"></textarea>
 
-  <textarea class="output"; id="BFoutput"; style="position:absolute; height: 13%; width: 45%; top: 75%; resize: none; word-break: break-all; font-size: xx-large; border: 0in;"; placeholder="Output"></textarea>
+  <textarea class="output"; id="BFoutput"; style="font-family: cursive; border-radius: 20px; position:absolute; height: 13%; width: 45%; top: 95%; resize: none; word-break: break-all; font-size: xx-large; border: 0in;"; placeholder="Output"></textarea>
 
-  <textarea class="inputs"; id="CellInput"; style="position: absolute; top: 67.5%; right: 5.5%; resize: none; width: 43%; height: 20.5%; border: 0cm; font-size: xx-large;"; placeholder="Input Text here!"></textarea>
+  <textarea class="inputs"; id="CellInput"; style="font-family: cursive; border-radius: 20px; position: absolute; top: 87.5%; right: 5.5%; resize: none; width: 43%; height: 20.5%; border: 0cm; font-size: xx-large;"; placeholder="Input Text here!"></textarea>
 
 </body>
 
@@ -187,4 +206,3 @@
   }
 
 </script>
-
