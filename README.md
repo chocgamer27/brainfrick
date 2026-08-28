@@ -2,7 +2,7 @@
 ...
 
 
-# How does it work & how did I make it?
+## How does it work & how did I make it?
 We will start with the basics
 there is a textarea for the brainfrick code input I assigned it a class and id like so
 <textarea class="inputs"; id="BFinput">
