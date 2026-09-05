@@ -1,7 +1,9 @@
 # A brain Frick interpreter
 The project is a simple brainfrick interpreter, it includes an coding input where you input code, a regular imput used with "," and an output which outputs the cell's value in according to ascii (technically according to utff-8 I think), it also includes 16 cells to visualise the process and a tick speed input (how fast every symbol is executed).
 
-It executes the "code" by looping through every character and just a bunch of if statements.
+Brain *Frick is a popular eso-lang which is fairly simplistic with a total of 8 symbols.
+
+It executes the code by looping through every character and just a bunch of if statements.
 using the symbol ">" will go to the next cell (Left>Right & Top>Bottom, like reading a book) if the current cell is the last one (16) it will go back to the first cell (1).
 using the symbol "<" will go to the cell before if the current cell is the first one (1) it will go to the last cell (16).
 "+" & "-" are pretty simple, + will add 1 to the cell value (if its 255 it will set the cell value to 0), - will subtract one from cell value (if was 0 it will make it 255).
@@ -23,3 +25,7 @@ After a loop you can just continue with whatever brainfrick code you want So if 
 This project was kinda just made for fun as a first proper website and interpreter, It ended up being quite less complicated then I was execting tbh.
 
 (also side note, the green button that says "Run Code" will start the code and the pink button saying "STOP CODE!" will stop executing the code, to restart the execution of the code just click run again.)
+
+
+
+*its not actually brainfrick but I rather call it Brain Frick then brain fuck
