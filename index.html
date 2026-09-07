@@ -106,9 +106,40 @@
     let CurrentCell = 1;
     let Cinval = 0;
     let CInput = document.getElementById("CellInput").value;
+    const AsciTableCP437 = [ // -- compared to before this makes the symbols alot more accurate to my ascii chart I tend to follow (https://theasciicode.com.ar/)
+      "[Null]", "[SOH]", "[STX]", "[ETX]", "[EOT]", "[ENQ]", "[ACK]", "[BEL]",
+      "[BS]", "[HT]", "[LF]", "[VT]", "[FF]", "[CR]", "[SO]", "[SI]",
+      "[DLE]", "[DC1]", "[DC2]", "[DC3]", "[DC4]", "[NAK]", "[SYN]", "[ETB]",
+      "[CAN]", "[EM]", "[SUB]", "[ESC]", "[FS]", "[GS]", "[RS]", "[US]",
+      " ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/",
+      "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+      ":", ";", "<", "=", ">", "?", "@",
+      "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+      "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+      "[", "\\", "]", "^", "_", "`",
+      "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+      "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+      "{", "|", "}", "~", "[DEL]",
+      "Ç", "ü", "é", "â", "ä", "à", "å", "ç",
+      "ê", "ë", "è", "ï", "î", "ì", "Ä", "Å",
+      "É", "æ", "Æ", "ô", "ö", "ò", "û", "ù",
+      "ÿ", "Ö", "Ü", "ø", "£", "¥", "₧", "ƒ",
+      "á", "í", "ó", "ú", "ñ", "Ñ", "ª", "º",
+      "¿", "⌐", "¬", "½", "¼", "¡", "«", "»",
+      "░", "▒", "▓", "│", "┤", "Á", "Â", "À",
+      "©", "╣", "║", "╗", "╝", "¢", "¥", "┐",
+      "└", "┴", "┬", "├", "─", "┼", "ã", "Ã",
+      "╚", "╔", "╩", "╦", "╠", "═", "╬", "¤",
+      "ð", "Ð", "Ê", "Ë", "È", "ı", "Í", "Î",
+      "Ï", "└", "┴", "┬", "├", "─", "┼", "ó",
+      "ß", "Ô", "Ò", "õ", "Õ", "µ", "þ", "Þ",
+      "Ú", "Û", "Ù", "ý", "Ý", "¯", "´", "≡",
+      "±", "‗", "¾", "¶", "§", "÷", "¸", "°",
+      "¨", "·", "¹", "³", "²", "■", " "
+    ];
     
     document.getElementById(1).style.backgroundColor = "rgb(0,114,143)";
-    document.getElementById("BFoutput").textContent =""
+    document.getElementById("BFoutput").textContent =" "
 
 
     async function ProcessBF() {
@@ -125,10 +156,10 @@
         await wait(Delay); // wait delay +0.25 ms
 
 
-        if (code[i] == "+" && document.getElementById(CurrentCell).textContent<256){ // code for + to add 1 to current cell
+        if (code[i] == "+" && document.getElementById(CurrentCell).textContent<255){ // code for + to add 1 to current cell
           document.getElementById(CurrentCell).textContent = Number(document.getElementById(CurrentCell).textContent) + 1
         }
-        else if (code[i] == "+" && document.getElementById(CurrentCell).textContent>255){ // code for + to set current cell to 0 if cell is at 255 and its +
+        else if (code[i] == "+" && document.getElementById(CurrentCell).textContent>254){ // code for + to set current cell to 0 if cell is at 255 and its +
           document.getElementById(CurrentCell).textContent = document.getElementById(CurrentCell).textContent = 0
         };
 
@@ -169,12 +200,13 @@
         };
 
 
-        if (code[i] == "." && document.getElementById(CurrentCell).textContent != "127"){
+        if (code[i] == "."){ //&& document.getElementById(CurrentCell).textContent != "127"){
           CellVal = document.getElementById(CurrentCell).textContent;
-          document.getElementById("BFoutput").textContent += String.fromCharCode(CellVal);
-        } else if (code[i] == "." && document.getElementById(CurrentCell).textContent == "127"){
-          document.getElementById("BFoutput").textContent = document.getElementById("BFoutput").textContent.slice(0,-1);
-        }
+          //document.getElementById("BFoutput").textContent += String.fromCharCode(CellVal);
+          document.getElementById("BFoutput").textContent += AsciTableCP437[CellVal]
+        }; //else if (code[i] == "." && document.getElementById(CurrentCell).textContent == "127"){
+          //document.getElementById("BFoutput").textContent = document.getElementById("BFoutput").textContent.slice(0,-1);
+        //}
 
         if (code[i] == "," && CInput.length >= Cinval ){
           document.getElementById(CurrentCell).textContent = CInput[Cinval].codePointAt(0);
