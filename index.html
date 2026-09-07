@@ -169,10 +169,12 @@
         };
 
 
-        if (code[i] == "."){
-          CellVal = document.getElementById(CurrentCell).textContent
-          document.getElementById("BFoutput").textContent += String.fromCharCode(CellVal)
-        };
+        if (code[i] == "." && document.getElementById(CurrentCell).textContent != "127"){
+          CellVal = document.getElementById(CurrentCell).textContent;
+          document.getElementById("BFoutput").textContent += String.fromCharCode(CellVal);
+        } else if (code[i] == "." && document.getElementById(CurrentCell).textContent == "127"){
+          document.getElementById("BFoutput").textContent = document.getElementById("BFoutput").textContent.slice(0,-1);
+        }
 
         if (code[i] == "," && CInput.length >= Cinval ){
           document.getElementById(CurrentCell).textContent = CInput[Cinval].codePointAt(0);
